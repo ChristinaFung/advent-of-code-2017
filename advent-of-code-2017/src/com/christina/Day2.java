@@ -74,27 +74,24 @@ public class Day2 {
         // at each index w/ values at all other indices in the list
         // TODO: add...more...comments...
 
-        for(int i = 0; i < numbers.size(); i++) {
-            for (int j = 0; j < numbers.get(i).size(); j++) {
-                int currentNum = numbers.get(i).get(j);
+        for (List<Integer> number : numbers) {
+            for (int j = 0; j < number.size(); j++) {
+                int currentNum = number.get(j);
 
-                for (int k = 0; k < numbers.get(i).size(); k++) {
-                    int nextNum = numbers.get(i).get(k);
-                    int modulus;
+                for (int k = (j + 1); k < number.size(); k++) {
+                    int nextNum = number.get(k);
+                    int largerNum = Math.max(currentNum, nextNum);
+                    int smallerNum = Math.min(currentNum, nextNum);
+                    int modulus = largerNum % smallerNum;
 
-                    // TODO: Refactor this if statement....
-                    if (currentNum > nextNum) {
-                        modulus = currentNum % nextNum;
-                        if (modulus == 0) {
-                            quotient = currentNum / nextNum;
-
-                            checkSum = checkSum + quotient;
-                        }
+                    if (modulus == 0) {
+                        quotient = largerNum / smallerNum;
+                        checkSum = checkSum + quotient;
                     }
                 } // end of k loop
             } // end of j loop
-        } // end of i loop
+        }
 
-        System.out.println("checkSum: "+checkSum);
+        System.out.println("checkSum: " + checkSum);
     }
 }

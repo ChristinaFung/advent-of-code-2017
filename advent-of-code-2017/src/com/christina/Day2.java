@@ -56,6 +56,7 @@ public class Day2 {
 
         // Read each line from text input file +
         // convert input into a list of integer lists
+        
         while ((sheetInput = bufferedReader.readLine()) != null) {
 
             String[] input = sheetInput.split("[ \t]+");
@@ -70,9 +71,8 @@ public class Day2 {
         }
 
         // use "numbers" list to find checksum
-        // for each integer list or row stored in "numbers", compare the value
-        // at each index w/ values at all other indices in the list
-        // TODO: add...more...comments...
+        // for each integer list or row stored in "numbers",
+        // loop through all pair combinations + find modulus + quotient
 
         for (List<Integer> number : numbers) {
             for (int j = 0; j < number.size(); j++) {

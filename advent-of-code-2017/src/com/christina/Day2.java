@@ -56,7 +56,7 @@ public class Day2 {
 
         // Read each line from text input file +
         // convert input into a list of integer lists
-        
+
         while ((sheetInput = bufferedReader.readLine()) != null) {
 
             String[] input = sheetInput.split("[ \t]+");

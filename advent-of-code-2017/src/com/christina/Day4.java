@@ -3,10 +3,7 @@ package com.christina;
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Day4 {
     private static final String filePath = "day4-input.txt";
@@ -33,7 +30,7 @@ public class Day4 {
            passphrases.add(passwordLine);
         }
 
-        System.out.println(solvePartOneOptimized(passphrases));
+        System.out.println(solvePart2(passphrases));
 
     }
 
@@ -100,5 +97,47 @@ public class Day4 {
         }
 
         return validPhraseCount;
+    }
+
+    public static int solvePart2(List<List<String>> args) {
+        List<List<String>> passphrases = args;
+        int validPhraseCount = 0;
+
+        for (List<String> passphrase : passphrases) {
+            boolean isValidPhrase = true;
+            Set<String> phrasesSet = new HashSet<>();
+
+            for (int j = 0; j < passphrase.size(); j++) {
+                String currentWord = sortString(passphrase.get(j));
+
+                if (phrasesSet.contains(currentWord)) {
+                    isValidPhrase = false;
+                    break;
+                } else {
+                    phrasesSet.add(currentWord);
+                }
+            } // end of j loop
+
+            if (isValidPhrase) {
+                validPhraseCount++;
+            }
+        }
+
+        return validPhraseCount;
+
+    }
+
+    // ty GFG: http://www.geeksforgeeks.org/sort-a-string-in-java-2-different-ways/
+    // Method to sort a string alphabetically
+    public static String sortString(String input)
+    {
+        // convert input string to char array
+        char charArray[] = input.toCharArray();
+
+        // sort temp character array
+        Arrays.sort(charArray);
+
+        // return new sorted string
+        return new String(charArray);
     }
 }

@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Day4 {
     private static final String filePath = "day4-input.txt";
@@ -30,8 +32,8 @@ public class Day4 {
             // store each row in the list called "numbers"
            passphrases.add(passwordLine);
         }
-        
-        System.out.println(solvePart1(passphrases));
+
+        System.out.println(solvePartOneOptimized(passphrases));
 
     }
 
@@ -55,6 +57,41 @@ public class Day4 {
                         break secondLoop;
                     }
                 } // end of k loop
+            } // end of j loop
+
+            if (isValidPhrase) {
+                validPhraseCount++;
+            }
+        }
+
+        return validPhraseCount;
+    }
+
+    /*
+    Instead of using nested for loop, can use set to store passwords we've seen before in the phrase
+    while iterating in one go!
+
+    - Sets represent a group of items that are all unique
+    - pros: set operations on sets (aka union/intersection/disjoint), can insert or check if exists in O(1)
+    - cons: items not guaranteed to be in the order you put them in, if you are iterating through them
+     */
+    public static int solvePartOneOptimized(List<List<String>> args) {
+        List<List<String>> passphrases = args;
+        int validPhraseCount = 0;
+
+        for (List<String> passphrase : passphrases) {
+            boolean isValidPhrase = true;
+            Set<String> phrasesSet = new HashSet<>();
+
+            for (int j = 0; j < passphrase.size(); j++) {
+                String currentWord = passphrase.get(j);
+
+                if (phrasesSet.contains(currentWord)) {
+                    isValidPhrase = false;
+                    break;
+                } else {
+                    phrasesSet.add(currentWord);
+                }
             } // end of j loop
 
             if (isValidPhrase) {

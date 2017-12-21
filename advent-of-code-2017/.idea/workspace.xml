@@ -15,8 +15,8 @@
       <file leaf-file-name="Day1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/christina/Day1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="0">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,28 +27,32 @@
       <file leaf-file-name="Day2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/christina/Day2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="181">
+              <caret line="82" column="29" lean-forward="false" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Day3.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/christina/Day3.java">
+      <file leaf-file-name="Day4.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/christina/Day4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="171">
+              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="day2-input.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day2-input.txt">
+      <file leaf-file-name="day4-input.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day4-input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="45">
+              <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -75,8 +79,10 @@
         <option value="$PROJECT_DIR$/src/com/christina/Main.java" />
         <option value="$PROJECT_DIR$/src/com/christina/Day1.java" />
         <option value="$PROJECT_DIR$/day2-input.txt" />
-        <option value="$PROJECT_DIR$/src/com/christina/Day2.java" />
         <option value="$PROJECT_DIR$/src/com/christina/Day3.java" />
+        <option value="$PROJECT_DIR$/src/com/christina/Day2.java" />
+        <option value="$PROJECT_DIR$/day4-input.txt" />
+        <option value="$PROJECT_DIR$/src/com/christina/Day4.java" />
       </list>
     </option>
   </component>
@@ -101,10 +107,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,21 +117,11 @@
               <item name="advent-of-code-2017" type="b2602c69:ProjectViewProjectNode" />
               <item name="advent-of-code-2017" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="advent-of-code-2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="advent-of-code-2017" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="advent-of-code-2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="advent-of-code-2017" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="christina" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,10 +140,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Day3">
-    <configuration name="Day3" type="Application" factoryName="Application" singleton="true" temporary="true">
+  <component name="RunManager" selected="Application.Day4">
+    <configuration name="Day4" type="Application" factoryName="Application" singleton="true" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.christina.Day3" />
+      <option name="MAIN_CLASS_NAME" value="com.christina.Day4" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -179,7 +174,7 @@
     </configuration>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Day3" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Day4" />
       </list>
     </recent_temporary>
   </component>
@@ -246,11 +241,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2-input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2-input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/christina/Day2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -331,7 +400,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="67" column="9" lean-forward="false" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -374,16 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/christina/Day1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day2-input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -392,19 +453,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/christina/Day2.java">
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="27" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/christina/Day3.java">
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        <state relative-caret-position="0">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4-input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="82" column="29" lean-forward="false" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/christina/Day4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

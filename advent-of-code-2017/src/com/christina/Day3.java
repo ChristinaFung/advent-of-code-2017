@@ -10,6 +10,7 @@ public class Day3 {
         while ((n * n) < input) {
             n = n + 1;
             System.out.println("n: "+n);
+            System.out.println("n*n: "+(n * n));
         }
         System.out.println("n*n: "+(n * n));
     }

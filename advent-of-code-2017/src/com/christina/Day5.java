@@ -11,7 +11,7 @@ public class Day5 {
 
     public static void main(String[] args) throws IOException {
         solvePartOne(getInput(filePath));
-
+        solvePartTwo(getInput(filePath));
     }
 
     public static List<Integer> getInput(String path) throws IOException {
@@ -38,6 +38,27 @@ public class Day5 {
         while (i >= 0 && i < input.size()) {
             int offset = input.get(i);
             input.set(i, input.get(i) + 1);
+            i = i + offset;
+            steps++;
+        }
+
+        System.out.println("steps: "+steps);
+
+        return steps;
+    }
+
+    public static int solvePartTwo(List<Integer> input) {
+        int i = 0;
+        int steps = 0;
+        System.out.println("input size: "+input.size());
+
+        while (i >= 0 && i < input.size()) {
+            int offset = input.get(i);
+            //  if the offset was three or more, instead decrease it by 1.
+            // Otherwise, increase it by 1 as before.
+            int increment = offset >= 3 ? (-1) : 1;
+
+            input.set(i, input.get(i) + increment);
             i = i + offset;
             steps++;
         }

@@ -9,7 +9,8 @@ public class Day6 {
     private static final String filePath = "day6-input.txt";
 
     public static void main(String[] args) throws IOException {
-       findIndex(getInput(filePath)) ;
+//       findIndexOfLargestVal(getInput(filePath));
+       solvePartOne(getInput(filePath));
     }
 
     public static List<Integer> getInput(String path) throws IOException {
@@ -36,26 +37,49 @@ public class Day6 {
     }
 
     public static int solvePartOne(List<Integer> input) {
-        int i;
+        int i = 0;
+        int j = 0;
         int cycles = 0;
         Set<List<Integer>> cycleSets = new HashSet<>();
 
+
+        // checks to see if cycle has already been seen
         while(!cycleSets.contains(input)) {
             cycleSets.add(input);
-            i = findIndex(input);
-            int blocks = input.get(i);
+            i = findIndexOfLargestVal(input);
+            j = (i == (input.size() - 1)) ? 0 : i + 1;
 
-            for (int j = 0; j < blocks; j++) {
-                // set input
+            System.out.println("j: "+j+" i: "+i);
+            int largestVal = input.get(i);
+            System.out.println("largestVal: "+largestVal);
+
+
+            // redistribute blocks amongst memory banks
+            // start from index after largestVal
+           while (j >= 0 && j < input.size() && largestVal != 0) {
+                input.set(j, input.get(j) + 1);
+                largestVal--;
+
+                // reset index to 0 after last index has been reached
+                if (j == (input.size() - 1)) {
+                    j = 0;
+                } else {
+                    j++;
+                }
+
+                System.out.println("largestVal decremented: "+largestVal);
+                System.out.println("j is now: "+j);
             }
+            System.out.println("next cycle: "+input);
 
             cycles++;
         }
+        System.out.println("cycles: "+cycles);
 
         return cycles;
     }
 
-    public static int findIndex(List<Integer> input) {
+    public static int findIndexOfLargestVal(List<Integer> input) {
         int largest = input.get(0);
         int index = 0;
 

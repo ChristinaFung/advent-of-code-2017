@@ -9,8 +9,7 @@ public class Day6 {
     private static final String filePath = "day6-input.txt";
 
     public static void main(String[] args) throws IOException {
-//       findIndexOfLargestVal(getInput(filePath));
-       solvePartOne(getInput(filePath));
+       System.out.println(solvePartOne(getInput(filePath)));
     }
 
     public static List<Integer> getInput(String path) throws IOException {
@@ -31,17 +30,14 @@ public class Day6 {
            }
         }
 
-        System.out.println("input: "+input);
-
         return input;
     }
 
     public static int solvePartOne(List<Integer> input) {
-        int i = 0;
-        int j = 0;
+        int i;
+        int j;
         int cycles = 0;
         Set<List<Integer>> cycleSets = new HashSet<>();
-
 
         // checks to see if cycle has already been seen
         while(!cycleSets.contains(input)) {
@@ -49,14 +45,14 @@ public class Day6 {
             i = findIndexOfLargestVal(input);
             j = (i == (input.size() - 1)) ? 0 : i + 1;
 
-            System.out.println("j: "+j+" i: "+i);
             int largestVal = input.get(i);
-            System.out.println("largestVal: "+largestVal);
 
+            // remove blocks from memory bank w/ largest amount of blocks
+            input.set(i, 0);
 
             // redistribute blocks amongst memory banks
             // start from index after largestVal
-           while (j >= 0 && j < input.size() && largestVal != 0) {
+           while (largestVal > 0) {
                 input.set(j, input.get(j) + 1);
                 largestVal--;
 
@@ -66,15 +62,10 @@ public class Day6 {
                 } else {
                     j++;
                 }
-
-                System.out.println("largestVal decremented: "+largestVal);
-                System.out.println("j is now: "+j);
             }
-            System.out.println("next cycle: "+input);
 
             cycles++;
         }
-        System.out.println("cycles: "+cycles);
 
         return cycles;
     }
@@ -82,6 +73,7 @@ public class Day6 {
     public static int findIndexOfLargestVal(List<Integer> input) {
         int largest = input.get(0);
         int index = 0;
+        List<Integer> largestValues = new ArrayList<>();
 
         for (int i = 0; i < input.size(); i++) {
             if (input.get(i) > largest) {
@@ -89,17 +81,22 @@ public class Day6 {
             }
         }
 
+
         // write code to replicate "indexOf" method because l e a r n i n g
         for (int i = 0; i < input.size(); i++) {
             int currentVal = input.get(i);
-            if (currentVal == largest) {
-                index = i;
-                System.out.println("i: "+i);
+
+            // check for previous occurrence of largest value
+            while (!largestValues.contains(currentVal)) {
+                largestValues.add(currentVal);
+
+                if (currentVal == largest) {
+                    index = i;
+                }
             }
+
         }
 
         return index;
     }
-
-
 }

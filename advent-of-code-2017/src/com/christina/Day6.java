@@ -37,10 +37,12 @@ public class Day6 {
         int i;
         int j;
         int cycles = 0;
+
         Set<List<Integer>> cycleSets = new HashSet<>();
 
         // checks to see if cycle has already been seen
         while(!cycleSets.contains(input)) {
+
             cycleSets.add(input);
             i = findIndexOfLargestVal(input);
             j = (i == (input.size() - 1)) ? 0 : i + 1;
@@ -67,7 +69,43 @@ public class Day6 {
             cycles++;
         }
 
+        System.out.println(solvePartTwo(input));
+
         return cycles;
+    }
+
+    public static int solvePartTwo(List<Integer> input) {
+        int i;
+        int j;
+        int infiniteLoopCycles = 0;
+        Set<List<Integer>> cycleSets = new HashSet<>();
+        List<Integer> inputLastSeen = input;
+
+        while(!cycleSets.contains(inputLastSeen)) {
+
+            cycleSets.add(input);
+            i = findIndexOfLargestVal(input);
+            j = (i == (input.size() - 1)) ? 0 : i + 1;
+
+            int largestVal = input.get(i);
+
+            input.set(i, 0);
+
+            while (largestVal > 0) {
+                input.set(j, input.get(j) + 1);
+                largestVal--;
+
+                if (j == (input.size() - 1)) {
+                    j = 0;
+                } else {
+                    j++;
+                }
+            }
+
+            infiniteLoopCycles++;
+        }
+
+        return infiniteLoopCycles;
     }
 
     public static int findIndexOfLargestVal(List<Integer> input) {

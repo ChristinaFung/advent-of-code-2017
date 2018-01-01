@@ -1,6 +1,11 @@
 package com.christina;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
+
 import static java.lang.Math.abs;
 
 public class Day3 {
@@ -54,6 +59,9 @@ public class Day3 {
 
     public static int solvePartTwo() throws IOException {
         int answer = 0;
+        int sum = 0;
+        int input = 368078;
+        HashMap<Coordinate, Integer> data = new HashMap<>();
 
         /*
             1. dont know any values beforehand
@@ -65,19 +73,54 @@ public class Day3 {
                 - key value pairs (key: coordinate, value: sum at that coord)
 
            next:
-           - how to represent coordinates as keys
+           - how to represent coordinates as keys - DONE
            - how to get surrounding values
+                - (x-1), (y-1), (x+1) (y+1)
            - how to iterate through all the key value pairs
          */
 
-        /*
-            while sum < input
 
-         */
+        while (sum < input) {
+            
+        }
+
+
         return answer;
     }
 
-    class Coordinate {
+    public static int getSum(Coordinate coord, HashMap<Coordinate, Integer> hashmap) {
+        int sum = 1;
+        Coordinate points = coord;
+
+        // coordinates of all points surrounding coord
+        Coordinate[] coordinates = {
+                new Coordinate(points.x+1,points.y),
+                new Coordinate(points.x+1,points.y+1),
+                new Coordinate(points.x,points.y+1),
+                new Coordinate(points.x-1,points.y+1),
+                new Coordinate(points.x-1,points.y),
+                new Coordinate(points.x-1,points.y-1),
+                new Coordinate(points.x,points.y-1),
+                new Coordinate(points.x+1,points.y-1),
+        };
+
+        List<Coordinate> surroundingVals = Arrays.asList(coordinates);
+
+        for (int i = 0; i < surroundingVals.size(); i++) {
+            Coordinate key = coordinates[i];
+
+            if (hashmap.containsKey(key)) {
+                sum = sum + hashmap.get(key);
+            } else {
+                break;
+            }
+        }
+        System.out.println("sum: "+sum);
+
+        return sum;
+    }
+
+    public static class Coordinate {
         private int x;
         private int y;
 

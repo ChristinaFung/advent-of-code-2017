@@ -51,4 +51,68 @@ public class Day3 {
 
         return steps;
     }
+
+    public static int solvePartTwo() throws IOException {
+        int answer = 0;
+
+        /*
+            1. dont know any values beforehand
+                - need dynamic data structure
+            2. current value based on prev values
+                - need to know prev values, prev values must be stored (efficiently)
+            3. need to know position (adjacent + diagonals)
+                - coordinates
+                - key value pairs (key: coordinate, value: sum at that coord)
+
+           next:
+           - how to represent coordinates as keys
+           - how to get surrounding values
+           - how to iterate through all the key value pairs
+         */
+
+        /*
+            while sum < input
+
+         */
+        return answer;
+    }
+
+    class Coordinate {
+        private int x;
+        private int y;
+
+        public Coordinate(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        public int x() {
+            return this.x;
+        }
+
+        public int y() {
+            return this.y;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (!(obj instanceof Coordinate)) {
+                return false;
+            }
+
+            Coordinate coordinate = (Coordinate) obj;
+
+            return (this.x == coordinate.x && this.y == coordinate.y);
+        }
+
+        @Override
+        public int hashCode() {
+            int result = 17;
+            result = 31 * result + x;
+            result = 31 * result + y;
+            return result;
+        }
+    }
 }
+
+
